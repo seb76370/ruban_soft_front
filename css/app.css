@@ -108,13 +108,14 @@ main {
 
 .container_main_link_btn {
   width: 40%;
-  height: 30%;
+  height: calc(10vw + 5px);
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: calc(2vw + 5px);
   border: Black Solid 2px;
+  text-align: center;
 }
 .container_main_link_btn a {
   position: relative;
@@ -135,3 +136,23 @@ main {
   transform: scale(1);
   
 }
+
+/* .container_main_graphique{
+
+
+
+} */
+
+@media screen and (max-width: 800px) { 
+
+  .container_main_link {
+    flex-direction: column;
+  }
+  .container_main_link_btn {
+    width: 50%;
+    height: calc(15vw + 5px);
+
+  }
+
+}
+  
