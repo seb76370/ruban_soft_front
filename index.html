@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ruban Soft</title>
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/chart.css" />
   </head>
   <body>
     <header>
@@ -25,23 +26,29 @@
           <label>Connexion</label>
         </div>
         <div class="container_header_logo">
-            <img src="./images/Logo_RubanSoft.svg" alt="">
+          <img src="./images/Logo_RubanSoft.svg" alt="" />
         </div>
       </div>
     </header>
     <main>
       <div class="container_main">
         <div class="container_main_link">
-          <div class="container_main_link_btn"><a href="*">Les commandes</a></div>
+          <div class="container_main_link_btn">
+            <a href="*">Les commandes</a>
+          </div>
           <div class="container_main_link_btn"><a href="*">Clients</a></div>
           <div class="container_main_link_btn"><a href="*">Stocks</a></div>
           <div class="container_main_link_btn"><a href="*">Recettes</a></div>
           <div class="container_main_link_btn"><a href="*">Admin</a></div>
         </div>
-        <div class="container_main_graphique">
-
+        <div class="container_main_charts">
+          <div class="charts_bargraph">
+            <canvas id="chartBarGraph" ></canvas>
+          </div>
         </div>
       </div>
     </main>
+    <script src="node_modules/chart.js/dist/chart.umd.js"></script>                                 
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>
