@@ -5,10 +5,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://seb76370: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@github.com/seb76370/ruban_soft_front.git"
-  },
   "author": "",
   "license": "ISC",
   "bugs": {
