@@ -1,0 +1,98 @@
+
+
+:root {
+  --color-1: #9e6d18;
+  --color-2: #ffc259;
+  --color-3: #ebaa3b;
+  --color-4: #09519e;
+  --color-5: #3b90eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 80%;
+}
+
+table {
+  border: 1px solid var(--color-4);
+  border-radius: 5px;
+
+}
+table:hover{
+  cursor: pointer;
+}
+
+th {
+  background-color: var(--color-4);
+  font-size: clamp(10px, 2vw, 20px);
+  height: 3vh;
+  font-family: teamWorkItalic, serif;
+  color: var(--color-3);
+  
+}
+
+.column {
+  font-size: clamp(5px, 2vw, 20px);
+}
+
+
+
+td input {
+  width: 100%;
+  height: 2vw;
+  font-weight: 900;
+  text-align: center;
+  background-color: var(--color-5);
+  padding: 5px;
+  text-overflow: ellipsis;
+  font-family: banhnSchrift, serif;
+  color: var(--color-3);
+
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+input:hover {
+  cursor: pointer;
+}
+
+#col_firstname {
+  width: 10vw;
+}
+#col_lastname {
+  width: 10vw;
+}
+#col_email {
+  width: 13vw;
+}
+#col_phone_number {
+  width: 12vw;
+}
+#col_siret {
+  width: 12vw;
+}
+#col_adress {
+  width: 17vw;
+}
