@@ -26,4 +26,5 @@ Petite intro installation
 ```
 $ Creation d 'un répertoire dans le server Web "RubanSoft Application"
 $ git clone https://github.com/seb76370/ruban_soft_front.git
+$ npm install
 ```

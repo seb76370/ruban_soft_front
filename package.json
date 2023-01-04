@@ -1,0 +1,20 @@
+{
+  "name": "rubansoft",
+  "description": "1. Informations Générales\r 2. Langage et Package\r 3. installation",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seb76370/ruban_soft_front/issues"
+  },
+  "homepage": "https://github.com/seb76370/ruban_soft_front#readme",
+  "dependencies": {
+    "chart.js": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/chart.js": "^2.9.37"
+  }
+}
