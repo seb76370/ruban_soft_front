@@ -33,27 +33,23 @@ function addRow(datas) {
  */
 function updateRow(datas) {
   console.log("Methode update");
+  console.log(datas[".idclient"]);
   let nameCol;
   let selector;
   let row;
-
-  let rows = document.querySelectorAll(".idclient");
-
-
-  rows.forEach(function (currentValue) {
-    console.log(currentValue.querySelector("input").closest("tr").id);
-    if (currentValue.querySelector("input").closest("tr").id == datas[".idclient"]) {
-      row = currentValue.querySelector("input").closest("tr");
-    }
-  });
+  console.log("#" + datas[".idclient"]);
+  row = document.getElementById(datas[".idclient"]);
   console.log(row);
+
   if (row) {
     const keys = Object.keys(datas);
     keys.forEach((key) => {
       selector = key + " input";
       nameCol = row.querySelector(selector);
-      nameCol.value = datas[key];
-      nameCol.setAttribute("value", datas[key]);
+      if (nameCol) {
+        nameCol.value = datas[key];
+        nameCol.setAttribute("value", datas[key]);
+      }
     });
   }
 }
