@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-1: #9e6d18;
+  --color-2: #ffc259;
+  --color-3: #ebaa3b;
+  --color-4: #09519e;
+  --color-5: #3b90eb;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -19,7 +27,9 @@ body {
     to right,
     #85d8ce,
     #085078
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  );
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 
 header {
@@ -44,7 +54,7 @@ h1{
 .container_header h1 {
   /* border: Green Solid 1px; */
   font-size: calc(3vw + 5px);
-  color: blue;
+  color: var(--color-4);
 }
 
 .container_header_connexion {
