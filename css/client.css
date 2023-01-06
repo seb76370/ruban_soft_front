@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-1: #9e6d18;
+  --color-2: #ffc259;
+  --color-3: #ebaa3b;
+  --color-4: #09519e;
+  --color-5: #3b90eb;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  /* border: Green Solid 5px; */
+}
+
+.container__button{
+  /* background-color: red; */
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-solid{
+  font-size: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-4);
+  color: var(--color-1);
+}
+
+.container__tableClient {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* border: red Solid 1px; */
+  width: 60%;
+  min-height: 300px;
+}
+.container__formulaire {
+  /* border: black Solid 2px; */
+  width: 40%;
+  min-height: 300px;
+  display: flex;
+}
+
+.container__formulaire_form {
+  /* border: Green Solid 1px; */
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.container__formulaire_button {
+  /* border: Green Solid 1px; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.container__formulaire_button button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-4);
+  color: var(--color-1);
+  font-family: banhnSchrift, serif;
+  font-size: clamp(5px, 1vw, 20px);
+}
+
+.container__formulaire_button button:hover {
+  color: var(--color-3);
+
+}
+
+.group{
+  width: 80%;
+  /* Border: red Solid 1px; */
+}
+
+.container__formulaire_form label {
+  background-color: var(--color-4);
+  border-radius: 5px;
+  display: inline-block;
+  width: 100%;
+  font-family: banhnSchrift, serif;
+  font-size: clamp(5px, 1vw, 20px);
+  margin: 5px 0;
+  color: var(--color-3);
+  font-weight: 400;
+}
+
+.container__formulaire_form input {
+  background-color: var(--color-5);
+  font-family: banhnSchrift, serif;
+  font-size: clamp(5px, 1vw, 20px);
+  width: 100%;
+}
+
+table {
+  border: 1px solid var(--color-4);
+  border-radius: 5px;
+  width: 100%;
+}
+
+table:hover {
+  cursor: pointer;
+  width: 100%;
+
+}
+
+th {
+  background-color: var(--color-4);
+  font-size: clamp(10px, 2vw, 20px);
+  height: 3vh;
+  font-family: teamWorkItalic, serif;
+  color: var(--color-3);
+}
+
+.column {
+  font-size: clamp(5px, 1vw, 20px);
+}
+
+td input {
+  width: 100%;
+  height: 2vw;
+  font-weight: 900;
+  text-align: center;
+  background-color: var(--color-5);
+  padding: 5px;
+  text-overflow: ellipsis;
+  font-family: banhnSchrift, serif;
+  color: var(--color-3);
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+#col_firstname {
+  width: 14%;
+
+}
+#col_lastname {
+  width: 14%;
+
+}
+#col_email {
+  width: 14%;
+
+}
+#col_phone_number {
+  width: 14%;
+}
+#col_siret {
+  width: 14%;
+}
+#col_adress {
+  width: 26%;
+}
+
+@media screen and (max-width: 1600px) {
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container__tableClient,
+  .container__formulaire{
+    width: 100%;
+  }
+
+
+  .container__formulaire_form{
+    text-align: center;
+    width: 100%;
+  }
+
+  .container__formulaire_form label {
+
+    width: 100%;
+    font-size: clamp(5px, 3vw, 20px);
+    color: var(--color-3);
+    font-weight: 400;
+    min-height:30px ;
+    text-align: center;  
+  }
+
+  .group{
+    width: 80%;
+  }
+  
+  .container__formulaire_form input {
+    width: 100%;
+    font-size: clamp(5px, 3vw, 20px);
+    color: var(--color-3);
+    font-weight: 400;
+    min-height:30px ;
+    text-align: center;
+    margin: 1px;
+  }
+
+}

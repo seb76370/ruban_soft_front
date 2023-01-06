@@ -1,0 +1,14 @@
+@font-face {
+    font-family: teamWorkItalic;
+    src: url("../fonts/TeamWorkItalic.otf") format("opentype");
+  }
+  @font-face {
+    font-family: teamWorkRegular;
+    src: url("../fonts/TeamWorkItalic.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: banhnSchrift;
+    src: url("../fonts/BAHNSCHRIFT.TTF") format("truetype");
+  }
+

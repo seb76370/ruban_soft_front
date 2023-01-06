@@ -4,26 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ruban Soft</title>
+    <title>Tableur</title>
+    <script src="https://kit.fontawesome.com/20ed9f42ad.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/font.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/client.css" />
   </head>
   <body>
     <header>
       <div class="container_header">
         <h1>RubanSoft Application</h1>
-        <div class="container_header_connexion">
-          <form>
-            <div class="form_group login">
-              <label for="login">login :</label>
-              <input type="text" id="login" name="login" />
-            </div>
-            <div class="form_group password">
-              <label for="password">Mot de passe :</label>
-              <input type="password" id="password" name="password" />
-            </div>
-          </form>
-          <label>Connexion</label>
+        <div class="container__button">
+          <span><i class="fa-solid fa-arrow-left fa-fw" title="Back"></i></span>
         </div>
         <div class="container_header_logo">
           <svg
@@ -89,27 +81,77 @@
         </div>
       </div>
     </header>
-    <main>
-      <div class="container_main">
-        <div class="container_main_link">
-          <div class="container_main_link_btn">
-            <a href="*">Les commandes</a>
+    <div class="container">
+      <div class="container__tableClient">
+        <table>
+          <thead>
+            <th class="column" id="col_firstname">Prénom</th>
+            <th class="column" id="col_lastname">Nom</th>
+            <th class="column" id="col_email">Mail</th>
+            <th class="column" id="col_phone_number">Téléphone</th>
+            <th class="column" id="col_siret">SIRET</th>
+            <th class="column" id="col_adress">Adresse</th>
+          </thead>
+          <tbody class="table"></tbody>
+        </table>
+      </div>
+      <div class="container__formulaire">
+        <div class="container__formulaire_form">
+          <div class="group">
+            <label for="firstname_form">Prenom</label>
+            <input type="text" name="firstname_form" id="firstname_form" />
           </div>
-          <div class="container_main_link_btn">
-            <a href="client.html">Clients</a>
+          <div class="group">
+            <label for="name_form">Nom</label>
+            <input type="text" name="name_form" id="name_form" />
           </div>
-          <div class="container_main_link_btn"><a href="*">Stocks</a></div>
-          <div class="container_main_link_btn"><a href="*">Recettes</a></div>
-          <div class="container_main_link_btn"><a href="*">Admin</a></div>
+          <div class="group">
+            <label for="mail_form">Mail</label>
+            <input type="email" name="mail_form" id="mail_form" />
+          </div>
+          <div class="group">
+            <label for="tel_form">Téléphone</label>
+            <input type="number" name="tel_form" id="tel_form" />
+          </div>
+          <div class="group">
+            <label for="siret_form">Siret</label>
+            <input type="number" name="siret_form" id="siret_form" />
+          </div>
+          <div class="group">
+            <label for="adress_form">Adresse</label>
+            <input type="text" name="adress_form" id="adress_form" />
+          </div>
         </div>
-        <div class="container_main_charts">
-          <div class="charts_bargraph">
-            <canvas id="chartBarGraph"></canvas>
-          </div>
+        <div class="container__formulaire_button">
+          <button type="submit">AJOUTER</button>
         </div>
       </div>
-    </main>
-    <script src="node_modules/chart.js/dist/chart.umd.js"></script>
-    <script type="module" src="js/app.js"></script>
+    </div>
+    <template id="rowTemplate">
+      <tr>
+        <td class="firstname">
+          <input class="column" type="text" name="firstname" />
+        </td>
+        <td class="lastname">
+          <input class="column" type="text" name="lastname" />
+        </td>
+        <td class="email"><input class="column" type="email" name="" /></td>
+        <td class="phone_number">
+          <input class="column" type="number" name="phone_number" />
+        </td>
+        <td class="siret">
+          <input class="column" type="number" name="siret" />
+        </td>
+        <td class="adress">
+          <input class="column" class="column" type="text" name="adress" />
+        </td>
+      </tr>
+    </template>
+    <script
+      src="https://cdn.socket.io/4.3.2/socket.io.min.js"
+      integrity="sha384-KAZ4DtjNhLChOB/hxXuKqhMLYvx3b5MlT55xPEiNmREKRzeEm+RVPlTnAn0ajQNs"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./js/client.js"></script>
   </body>
 </html>
