@@ -27,12 +27,14 @@ const data = {
     type: "bar",
     data:data,
     options: {
+      responsive:true,
+      maintainAspectRatio:false,
         scales:{
             x:{
                 ticks:{
-                    color:"green",
+                    color:"#EBAA3B",
                     font:{
-                        size:40,
+                        size:20,
                         style:"italic",
                         weight:"bold",                
                       }
@@ -40,11 +42,12 @@ const data = {
             },
             y:{
                 ticks:{
-                    color:"green",
+                  color:"#EBAA3B",
                     font:{
-                        size:40,
+                        size:20,
                         style:"italic",
-                        weight:"bold",                
+                        weight:"bold",  
+                        family:"banhnSchrift"              
                       }
                 }
             }
@@ -53,11 +56,12 @@ const data = {
             legend: {
               labels:{
                 // beginAtZero: true,
-                color:"red",
+                color:"#EBAA3B",
                 font:{
-                  size:40,
+                  size:20,
                   style:"italic",
-                  weight:"bold",                
+                  weight:"bold",
+                  family:"teamWorkRegular"                
                 }
               },
             },

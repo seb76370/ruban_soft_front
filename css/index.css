@@ -28,37 +28,32 @@ body {
     #85d8ce,
     #085078
   );
-  background-repeat: no-repeat;
-  background-size:cover;
+
 }
 
 header {
-  width: 90%;
+  width: 100%;
   /* Border: Green Solid 1px; */
   margin: 5px;
 }
-
-h1{
-  font-family: teamWorkItalic, serif;
-  font-size: 1vw;
-}
-
 .container_header {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 5px;
   /* Border: red Solid 5px; */
 }
 
 .container_header h1 {
   /* border: Green Solid 1px; */
-  font-size: calc(3vw + 5px);
+  font-size: calc(4vw + 5px);
   color: var(--color-4);
+  font-family: teamWorkItalic, serif;
 }
 
 .container_header_connexion {
-  border: black Solid 1px;
+  /* border: black Solid 1px; */
   padding: 5px;
   border-radius: 5px;
 }
@@ -88,9 +83,8 @@ h1{
 }
 
 main {
-  /* border: Green Solid 1px; */
+  /* border: orangered Solid 1px; */
   width: 90%;
-  height: 80%;
   position: relative;
 }
 
@@ -110,7 +104,10 @@ main {
   height: 90%;
   width: 50%;
   margin: 10px;
+  
 }
+
+
 
 .container_main_link {
   display: flex;
@@ -124,24 +121,37 @@ main {
 .container_main_link_btn {
   width: 40%;
   height: calc(10vw + 5px);
+
+  border: none;
   border-radius: 10px;
+  background-color: var(--color-4);
+  color: var(--color-1);
+  font-family: banhnSchrift, serif;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: calc(2vw + 5px);
-  border: Black Solid 2px;
   text-align: center;
 }
+
+
 .container_main_link_btn a {
   position: relative;
   text-decoration: none;
+  color: var(--color-1);
+  font-size: clamp(5px, 5vw, 50px);
 }
+
+.container_main_link_btn a:hover {
+  color: var(--color-3);
+}
+
 .container_main_link_btn a::after {
   position: absolute;
   bottom: 0;
   left: 0;
   content: "";
-  background-color: #085078;
+  background-color: var(--color-3);
   width: 100%;
   height: 3px;
   transform: scale(0);
@@ -155,17 +165,38 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 100%;
   height: 100%;
+  Border: Green Solid 1px;
+}
+
+#chartBarGraph{
+  min-height: 250px;
+  min-width: 350px;
+  height: 100%;
+  /* Border: Green Solid 1px; */
 }
 
 
-@media screen and (max-width: 800px) {
-  .container_main_link {
+@media screen and (max-width: 1600px) {
+  .container_header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .container_main {
     flex-direction: column;
   }
+  .container_main_link,
+  .container_main_charts {
+
+    width: 100%;
+    /* Border: red Solid 1px; */
+  }
   .container_main_link_btn {
-    width: 50%;
+    /* margin-top: 50px; */
+
+    width: 30%;
     height: calc(15vw + 5px);
   }
 }
