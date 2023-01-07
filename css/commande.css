@@ -41,14 +41,21 @@ body {
   color: var(--color-1);
 }
 
-.container__tableCommande,
+.container__tableCommande{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 5px;
+}
+
 .container__formulaireCommande {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-
-  width: 100%;
+  width: 50%;
   gap: 5px;
 }
 
@@ -97,7 +104,7 @@ th {
   color: var(--color-3);
 }
 
-.column {
+.column, .column_form {
   font-size: clamp(5px, 1vw, 15px);
 }
 
@@ -160,8 +167,31 @@ input:hover {
   width: 8%;
 }
 
+
+.column_form:nth-child(1) {
+  width: 8%;
+}
+.column_form:nth-child(2) {
+  width: 8%;
+}
+.column_form:nth-child(3) {
+  width: 8%;
+}
+.column_form:nth-child(4) {
+  width: 25%;
+}
+.column_form:nth-child(5) {
+  width: 25%;
+}
 @media screen and (max-width: 1600px) {
   .container__tableCommande {
     min-height: 300px;
+  }
+  .container__formulaireCommande {
+    width: 100%;
+  }
+
+  .container__button button {
+    font-size: clamp(5px, 2vw, 20px);
   }
 }
