@@ -31,11 +31,6 @@ body {
 
 }
 
-header {
-  width: 100%;
-  /* Border: Green Solid 1px; */
-  margin: 5px;
-}
 .container_header {
   display: flex;
   width: 100%;
