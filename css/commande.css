@@ -33,13 +33,7 @@ body {
   /* border: Green Solid 5px; */
 }
 
-.fa-solid {
-  font-size: 50px;
-  border: none;
-  border-radius: 10px;
-  background-color: var(--color-4);
-  color: var(--color-1);
-}
+
 
 .container__tableCommande{
   display: flex;
