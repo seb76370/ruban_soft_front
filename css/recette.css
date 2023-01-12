@@ -24,15 +24,14 @@ main {
   height: 100%;
   display: flex;
   flex-direction: column;
-
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
-
-
+  /* Border: Green Solid 1px; */
 }
 
-textarea{
-  width: 100%;
+textarea {
+  width: 90%;
   height: 100%;
   color: var(--color-1);
   font-size: clamp(30px, 1vw, 50px);
@@ -40,9 +39,11 @@ textarea{
   background-color: var(--color-4);
 }
 
-.entete{
+.entete {
   display: flex;
-
+  /* Border: red Solid 1px; */
+  justify-content: center;
+  align-items: center;
 }
 
 label {
@@ -69,7 +70,6 @@ input {
   margin-right: 5px;
 }
 
-
 .container_button {
   display: flex;
   justify-content: flex-start;
@@ -83,9 +83,6 @@ input {
   justify-content: center;
 }
 
-.btnform:nth-child(1) {
-  margin-top: 50px;
-}
 
 .btnform {
   width: 30%;
@@ -109,13 +106,6 @@ input {
     /* Border: Green Solid 1px; */
     height: 100px;
   }
-  .container_form form {
-    margin-top: 0;
-  }
-
-  .container_button {
-    border: Green Solid 1px;
-  }
 
   main {
     width: 100%;
@@ -124,6 +114,9 @@ input {
   }
 
   input {
-    width: 100%;
+    width: 80%;
+  }
+  .entete {
+    flex-direction: column;
   }
 }
