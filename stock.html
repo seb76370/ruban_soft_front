@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tableur</title>
+    <script
+      src="https://kit.fontawesome.com/20ed9f42ad.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/commons.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="./css/stock.css" />
+  </head>
+  <body>
+    <header>
+      <header-element></header-element>
+    </header>
+    <div class="container">
+      <div class="container__tableStock">
+        <div class="container__button">
+          <button id="deleteBtn">SUPPRIMER</button>
+        </div>
+        <!-- TABLE -->
+      </div>
+      <div class="container__formulaireStock">
+        <div class="group">
+          <label for="quantite_form">Quantité</label>
+          <input type="text" name="quantite_form" id="quantite_form" />
+        </div>
+        <div class="container__button">
+          <button id="addBtn">AJOUTER</button>
+        </div>
+      </div>
+    </div>
+    <template id="rowTemplate">
+      <tr>
+        <td class="codeComposant">
+          <input class="column" type="text" name="codeComposant" />
+        </td>
+        <td class="quantite">
+          <input class="column" type="text" name="quantite" />
+        </td>
+      </tr>
+    </template>
+    <script
+      src="https://cdn.socket.io/4.3.2/socket.io.min.js"
+      integrity="sha384-KAZ4DtjNhLChOB/hxXuKqhMLYvx3b5MlT55xPEiNmREKRzeEm+RVPlTnAn0ajQNs"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./js/stock.js"></script>
+  </body>
+</html>

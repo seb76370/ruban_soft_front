@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tableur</title>
-    <script
-      src="https://kit.fontawesome.com/20ed9f42ad.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="css/font.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/commande.css" />
-  </head>
-  <body>
-    <header>
+export default class Header extends HTMLElement {
+  constructor() {
+    super();
+    this.innerHTML = `
       <div class="container_header">
         <h1>RubanSoft Application</h1>
         <div class="container__button">
-          <span><i class="fa-solid fa-arrow-left fa-fw" title="Back"></i></span>
+        <a href="index.html"><span><i class="fa-solid fa-arrow-left fa-fw" title="Back"></i></span></a>
         </div>
         <div class="container_header_logo">
           <svg
@@ -82,124 +69,10 @@
             </defs>
           </svg>
         </div>
-      </div>
-    </header>
-    <div class="container">
-      <div class="container__tableCommande">
-        <div class="container__button">
-          <button id="deleteBtn">SUPPRIMER</button>
-        </div>
-        <table>
-          <thead>
-            <th class="column" id="col_Siret">SIRET</th>
-            <th class="column" id="col_Produit">PRODUIT</th>
-            <th class="column" id="col_Prix">PRIX</th>
-            <th class="column" id="col_DateCommande">Date de Commande</th>
-            <th class="column" id="col_DateLivraisonSouhaite">
-              Date de Livraison Souhaité
-            </th>
-            <th class="column" id="col_DateDebutProduction">
-              Date de Début de Production
-            </th>
-            <th class="column" id="col_RefFilm">Référence du Film</th>
-            <th class="column" id="col_CodeMachine">Code Mahcine Utlisés</th>
-            <th class="column" id="col_DateFinProduction">
-              Date de Fin de Production
-            </th>
-            <th class="column" id="col_DateEnvoieLivraison">
-              Date D'envoie en Livraison
-            </th>
-            <th class="column" id="col_NuméroSuivi">Numéro de Suivi</th>
-            <th class="column" id="col_PoidsColis">Poids du Colis</th>
-          </thead>
-          <tbody class="table">
-            
-
-          </tbody>
-        </table>
-      </div>
-      <div class="container__formulaireCommande">
-        <table>
-          <thead>
-            <th class="column_form" id="col_Siret">SIRET</th>
-            <th class="column_form" id="col_Produit">PRODUIT</th>
-            <th class="column_form" id="col_Prix">PRIX</th>
-            <th class="column_form" id="col_DateCommande">Date de Commande</th>
-            <th class="column_form" id="col_DateLivraisonSouhaite">
-              Date de Livraison Souhaité
-            </th>
-          </thead>
-          <tbody class="table">
-            <tr>
-              <td class="siret">
-                <input  type="number" name="siret" />
-              </td>
-              <td class="produit">
-                <input type="text" name="produit" />
-              </td>
-              <td class="prix">
-                <input  type="text" name="prix" />
-              </td>
-              <td class="datecommande">
-                <input  type="date" name="datecommande" />
-              </td>
-              <td class="datelivraisonsouhaite">
-                <input  type="date" name="datelivraisonsouhaite" />
-              </td>
-             
-            </tr>
-          </tbody>
-        </table>
-        <div class="container__button">
-          <button id="addBtn">AJOUTER</button>
-        </div>
-      </div>
-    </div>
-    <template id="rowTemplate">
-      <tr>
-        <td class="siret">
-          <input class="column" type="number" name="siret" />
-        </td>
-        <td class="produit">
-          <input class="column" type="text" name="produit" />
-        </td>
-        <td class="prix">
-          <input class="column" type="text" name="prix" />
-        </td>
-        <td class="datecommande">
-          <input class="column" type="date" name="datecommande" />
-        </td>
-        <td class="datelivraisonsouhaite">
-          <input class="column" type="date" name="datelivraisonsouhaite" />
-        </td>
-        <td class="datedebutproduction">
-          <input class="column" type="date" name="datedebutproduction" />
-        </td>
-        <td class="reffilm">
-          <textarea name="reffilm" cols="40"></textarea>
-        </td>
-        <td class="codemachine">
-          <input class="column" type="text" name="codemachine" />
-        </td>
-        <td class="datefinproduction">
-          <input class="column" type="date" name="datefinproduction" />
-        </td>
-        <td class="dateenvoielivraison">
-          <input class="column" type="date" name="dateenvoielivraison" />
-        </td>
-        <td class="numerosuivi">
-          <input class="column" type="number" name="codemachine" />
-        </td>
-        <td class="poidscolis">
-          <input class="column" type="text" name="poidscolis" />
-        </td>
-      </tr>
-    </template>
-    <script
-      src="https://cdn.socket.io/4.3.2/socket.io.min.js"
-      integrity="sha384-KAZ4DtjNhLChOB/hxXuKqhMLYvx3b5MlT55xPEiNmREKRzeEm+RVPlTnAn0ajQNs"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="./js/commande.js"></script>
-  </body>
-</html>
+      </div>`;
+    let style = document.createElement("link");
+    style.setAttribute("rel", "stylesheet");
+    style.setAttribute("href", "./customelement/header/header.css");
+    this.append(style);
+  }
+}

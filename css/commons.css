@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --color-1: #9e6d18;
+    --color-2: #ffc259;
+    --color-3: #ebaa3b;
+    --color-4: #09519e;
+    --color-5: #3b90eb;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    font-size: 10px;
+    gap: 20px;
+    padding:10px;
+    background: linear-gradient(
+      to right,
+      #85d8ce,
+      #085078
+    );
+  
+  }
+
+  html {
+    font-size: 10px;
+  }
+
+  header {
+    width: 100%;
+    margin: 5px;
+  }

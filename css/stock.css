@@ -1,0 +1,102 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  gap: 10px;
+  /* border: Green Solid 5px; */
+}
+
+
+table-element,tablerow-element{
+  width: 100%;
+}
+
+.table{
+  width: 100%;
+}
+.container__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container__button button {
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-4);
+  color: var(--color-1);
+  font-family: banhnSchrift, serif;
+  font-size: clamp(5px, 1vw, 20px);
+}
+
+.container__button button:hover {
+  color: var(--color-3);
+}
+
+.container__tableStock {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 60%;
+  gap: 5px;
+  min-height: 400px;
+}
+
+.container__formulaireStock {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  /* Border: Green Solid 1px; */
+}
+.group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+}
+
+.container__formulaireStock label {
+  background-color: var(--color-4);
+  border-radius: 5px;
+  width: 70%;
+  min-width: 00px;
+  height: 100%;
+  font-family: banhnSchrift, serif;
+  font-size: clamp(20px, 1vw, 40px);
+  color: var(--color-3);
+  font-weight: 400;
+  /* Border: red Solid 1px; */
+}
+
+.container__formulaireStock input {
+  background-color: var(--color-5);
+  font-family: banhnSchrift, serif;
+  font-size: clamp(5px, 3vw, 40px);
+  width: 25%;
+  text-align: center;
+  border-radius: 5px;
+  color: var(--color-3);
+}
+
+@media screen and (max-width: 1600px) {
+  .container {
+    flex-direction: column;
+  }
+  .container__tableStock {
+    width: 100%;
+    min-height: 300px;
+  }
+
+  .container__button button {
+    font-size: clamp(20px, 1vw, 40px);
+  }
+}
