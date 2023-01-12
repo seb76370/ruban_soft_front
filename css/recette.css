@@ -1,0 +1,129 @@
+main {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_main {
+  width: 100%;
+  max-width: 1800px;
+  height: 100%;
+  /* Border: Green Solid 1px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.container_form,
+.container_button {
+  width: 700px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  gap: 20px;
+
+
+}
+
+textarea{
+  width: 100%;
+  height: 100%;
+  color: var(--color-1);
+  font-size: clamp(30px, 1vw, 50px);
+  border-radius: 10px;
+  background-color: var(--color-4);
+}
+
+.entete{
+  display: flex;
+
+}
+
+label {
+  /* Border: Green Solid 1px; */
+  min-width: 200px;
+  height: 50px;
+  font-family: banhnSchrift, serif;
+  color: var(--color-1);
+  font-size: clamp(30px, 1vw, 50px);
+}
+input {
+  /* Border: Green Solid 1px; */
+  min-width: 200px;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: banhnSchrift, serif;
+  color: var(--color-1);
+  font-size: clamp(30px, 1vw, 50px);
+  border-radius: 10px;
+  background-color: var(--color-4);
+  margin-right: 5px;
+}
+
+
+.container_button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btnform:nth-child(1) {
+  margin-top: 50px;
+}
+
+.btnform {
+  width: 30%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--color-4);
+  color: var(--color-1);
+  font-family: banhnSchrift, serif;
+  font-size: clamp(15px, 1vw, 50px);
+}
+
+.btnform:hover {
+  color: var(--color-3);
+}
+
+@media screen and (max-width: 600px) {
+  .inputform {
+    /* background-color: red; */
+    flex-direction: column;
+    gap: 20px;
+    /* Border: Green Solid 1px; */
+    height: 100px;
+  }
+  .container_form form {
+    margin-top: 0;
+  }
+
+  .container_button {
+    border: Green Solid 1px;
+  }
+
+  main {
+    width: 100%;
+    height: 50%;
+    min-height: 300px;
+  }
+
+  input {
+    width: 100%;
+  }
+}
