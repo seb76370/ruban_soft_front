@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tableur</title>
+    <script
+      src="https://kit.fontawesome.com/20ed9f42ad.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/commons.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="./css/recette.css" />
+  </head>
+  <body>
+    <header>
+      <header-element></header-element>
+    </header>
+    <main>
+      <div class="container_main">
+        <div class="container_form">
+          <div class="entete">
+            <label for="codeproduit">Code Produit</label>
+            <input type="text" id="codeproduit" />
+          </div>
+          <textarea name="recette" id="recette" cols="30" rows="10"></textarea>
+        </div>
+        <div class="container_button">
+          <button class="btnform" id="add">Ajouter</button>
+          <button class="btnform" id="update">Supprimer</button>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="./js/recette.js"></script>
+  </body>
+</html>
