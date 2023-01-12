@@ -1,4 +1,8 @@
 import { startSocket } from "./socket.js";
+import Header from "../customelement/header/header.js";
+
+customElements.define("header-element", Header);
+
 
 /**
  * Ajout d'un  ligne dans le tableur
