@@ -8,10 +8,14 @@
   /* border: Green Solid 5px; */
 }
 
-table-element{
+
+table-element,tablerow-element{
   width: 100%;
 }
 
+.table{
+  width: 100%;
+}
 .container__button {
   display: flex;
   flex-direction: column;

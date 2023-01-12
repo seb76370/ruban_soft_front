@@ -9,8 +9,8 @@ export function startSocket(funcAdd,FunctUp)
     /**
      * Connection au socket
      */
-  const socket = io("https://dev-passion76.fr:3007");
-  // const socket = io("http://localhost:3000");
+  // const socket = io("https://dev-passion76.fr:3007");
+  const socket = io("http://localhost:3000");
   socket.on("connect", function () {
     console.log("Connected");
   });
