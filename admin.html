@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tableur</title>
+    <script
+      src="https://kit.fontawesome.com/20ed9f42ad.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/commons.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="./css/admin.css" />
+  </head>
+  <body>
+    <header>
+      <header-element></header-element>
+    </header>
+    <main>
+      <div class="container_main">
+        <div class="container_form">
+          <form>
+            <div class="inputform">
+              <label for="inputform">login</label>
+              <input
+                name="loginform"
+                type="text"
+                id="loginform"
+              />
+            </div>
+            <div class="inputform">
+              <label for="passwordform">Mot de passe</label>
+              <input
+                name="passwordform"
+                type="password"
+                id="passwordform"
+              />
+            </div>
+          </form>
+        </div>
+        <div class="container_button">
+            <button class="btnform" id="adduser">Ajouter</button>
+            <button class="btnform" id="btn_deleteuser">Supprimer</button>
+            <button class="btnform" id="resetpassword">Reset Mot de passe</button>
+        </div>
+      </div>
+    </main>
+    
+    <script type="module" src="./js/admin.js"></script>
+  </body>
+</html>

@@ -48,6 +48,7 @@
   
   .container_header_connexion input {
     height: 30px;
+    
   }
   .container_header_connexion form {
     display: flex;
@@ -57,6 +58,14 @@
 
   .container_header_logo img {
     width: calc(20vw + 5px);
+  }
+
+  @media screen and (max-width: 600px) {
+   
+    .fa-solid {
+      font-size: 40px;
+    }
+
   }
   
   
