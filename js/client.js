@@ -14,13 +14,13 @@ function addRow(datas) {
   const newRow = rowTemplate.content.cloneNode(true);
   const keys = Object.keys(datas);
 
-  console.log(keys);
+  // console.log(keys);
 
   keys.forEach((key) => {
     if (key == "id") {
       const tr = newRow.querySelector("tr");
       tr.setAttribute("id", datas[key]);
-      console.log(tr);
+      // console.log(tr);
     } else {
       selector = "." + key + " input";
       nameCol = newRow.querySelector(selector);
@@ -88,10 +88,9 @@ const addClient = function add_client_BDD(client) {
 
   fetch("http://127.0.0.1:3008/customers/addCustomer", requestOptions)
     .then((response) => response.text())
-    .then((result) => {
-      const res = JSON.parse(result)
-      console.log(res["statusCode"])
-      if (res["statusCode"] != 409) {
+    .then((textResponse) => JSON.parse(textResponse))
+    .then((jsonResponse) => {
+      if (jsonResponse["statusCode"] != 409) {
         addRow({
           Firstname: firstname.value,
           Name: name.value,
@@ -100,9 +99,12 @@ const addClient = function add_client_BDD(client) {
           Siret: +siret.value,
           adress: adress.value,
         });
+        alert("Client ajouter")
+      }else{
+        alert("Formulaire non valide\n" + jsonResponse["propertyErrors"] + " invalide")
       }
     })
-    .catch((error) => alert(error, error));
+    .catch((error) =>console.log(error));   
 };
 
 const addAllclients = function Add_client_at_start_page(clients) {
