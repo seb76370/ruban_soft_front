@@ -67,7 +67,7 @@ const getClient = function Get_all_client() {
     redirect: "follow",
   };
   // .then((res) => addAllclients(res))
-  fetch("http://127.0.0.1:3008/customers/getCustomers", requestOptions)
+  fetch("https://dev-passion76.fr:3008/customers/getCustomers", requestOptions)
     .then((response) => response.text())
     .then((res) => addAllclients(JSON.parse(res)))
     .catch((error) => console.log("error", error));
@@ -86,7 +86,7 @@ const addClient = function add_client_BDD(client) {
     redirect: "follow",
   };
 
-  fetch("http://127.0.0.1:3008/customers/addCustomer", requestOptions)
+  fetch("https://dev-passion76.fr:3008/customers/addCustomer", requestOptions)
     .then((response) => response.text())
     .then((textResponse) => JSON.parse(textResponse))
     .then((jsonResponse) => {

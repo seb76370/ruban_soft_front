@@ -9,7 +9,7 @@ const Getcommand = function Get_all_command() {
     redirect: "follow",
   };
 
-  fetch("http://127.0.0.1:3008/commands/getCommand", requestOptions)
+  fetch("https://dev-passion76.fr:3008/commands/getCommand", requestOptions)
     .then((response) => response.text())
     .then((result) => addAllCommand(JSON.parse(result)))
     .catch((error) => console.log("error", error));
@@ -74,7 +74,7 @@ let requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://127.0.0.1:3008/commands/addCommand", requestOptions)
+fetch("https://dev-passion76.fr:3008/commands/addCommand", requestOptions)
   .then(response => response.text())
   .then(result => alert(result))
   .catch(error => alert('error', error));
@@ -87,7 +87,7 @@ const table = document.querySelector(".table");
 
 Getcommand();
 
-const socket = io("http://localhost:3008");
+const socket = io("https://dev-passion76.fr:3008");
 socket.on("connect", function () {
   console.log("Connected");
 });
